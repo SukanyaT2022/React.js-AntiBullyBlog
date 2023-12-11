@@ -1,6 +1,7 @@
-import { Fragment } from 'react'
+import { Component, Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import myLogo from '../Image/antibullyLogo-BGpng.png'
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'How2Handle', href: 'how2handle', current: false },
@@ -21,7 +22,8 @@ function classNames(...classes) {
     <Disclosure as="nav" className="bg-[#eeeeee]">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 md:py-2 ">
+        {/* this div below control the whole nav bar */}
+          <div className="mx-auto max-w-full px-2 sm:px-0 lg:px-6 md:py-2 ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
@@ -35,20 +37,25 @@ function classNames(...classes) {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
-                {/* targetLogo */}
-                <div className="flex flex-shrink-0 items-center">
+
+              {/* this div control parent of  logo and link navbar box */}
+              <div className="flex flex-1 items-center justify-center lg:items-center lg:justify-between">
+                {/* control logo- targetLogo */}
+                <div className="flex  items-center lg:flex-row w-[400px] bg-red-300">
                   <a href='/'><img
-                    className="h-14 w-auto"
-                    // src={myLogo}
+                    className="h-24 w-auto"
+                    src={myLogo}
                     alt="logo"
-                  /></a>
+                  />
+                  </a>
+                  <h2>Anti Bully</h2>
                 </div>
                 <div className="hidden lg:ml-6 lg:block">
 
                   {/* control the whole bloc of nav bar */}
 
-                  <div className="flex space-x-4 pt-3">
+    {/* this div control only link navbar box */}
+                  <div className="flex space-x-4  items-center">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
