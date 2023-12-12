@@ -9,6 +9,7 @@ import Footer from './component/Footer';
 // run this npm for brower router --npm install react-router-dom@6
 
 const App = () => {
+
   return (
     <div>
       <Navigation/>
