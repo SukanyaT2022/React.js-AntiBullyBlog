@@ -1,7 +1,7 @@
 import { Component, Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import myLogo from '../Image/antibullyLogo-BGpng.png'
+import myLogo from '../Image/bg-logo.png'
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'How2Handle', href: 'how2handle', current: false },
@@ -23,7 +23,7 @@ function classNames(...classes) {
       {({ open }) => (
         <>
         {/* this div below control the whole nav bar */}
-          <div className="mx-auto max-w-full px-2 sm:px-0 lg:px-6 md:py-2 ">
+          <div className="mx-auto max-w-full px-2 sm:px-0 lg:px-14 md:py-2 ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
@@ -40,15 +40,20 @@ function classNames(...classes) {
 
               {/* this div control parent of  logo and link navbar box */}
               <div className="flex flex-1 items-center justify-center lg:items-center lg:justify-between">
-                {/* control logo- targetLogo */}
-                <div className="flex  items-center lg:flex-row w-[400px] bg-red-300">
-                  <a href='/'><img
-                    className="h-24 w-auto"
+                
+                
+                {/* parent div- targetLogo and antibully */}
+                <div className="flex items-end lg:flex-row w-[400px]">
+                  <a href='/'>
+
+               {/* // changelogosize */}
+                    <img   
+                    className="h-14 w-auto"
                     src={myLogo}
                     alt="logo"
                   />
                   </a>
-                  <h2>Anti Bully</h2>
+                  <h2 className='text-blue-700 font-bold mb-2  text-xl'>Anti Bully</h2>
                 </div>
                 <div className="hidden lg:ml-6 lg:block">
 
@@ -61,8 +66,8 @@ function classNames(...classes) {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? ' text-grey-700  hover:text-[#0088cc]' : 'text-gray-800  hover:text-[#0088cc]',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current ? ' text-blue-700  hover:text-blue-500' : 'text-blue-700  hover:text-[#0088cc]',
+                          'rounded-md px-3 py-2 text-md font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
