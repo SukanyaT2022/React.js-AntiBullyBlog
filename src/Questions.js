@@ -21,7 +21,9 @@ setPosts([...posts, postParameter])
     
     return (
       <div>
-        <h1>React Post Comments</h1>
+        <h1 className='text-center'>React Post Comments</h1>
+        <h2 className='text-center'>Create New Post</h2>
+<PostForm onSubmit={handlePostSubmit}/>
   {posts.map((singlePost,index)=>{
     return(
 <div key={index}>
@@ -30,8 +32,7 @@ setPosts([...posts, postParameter])
 </div>
     )
   })}
-<h2>Create New Post</h2>
-<PostForm onSubmit={handlePostSubmit}/>
+
       </div>
     )
   }

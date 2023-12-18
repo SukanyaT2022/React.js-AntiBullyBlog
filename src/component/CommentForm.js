@@ -21,7 +21,7 @@ const handleCommentChange =(e)=>{
         Comment:
         <input type='text' value={comment} onChange={handleCommentChange}/>
     </label>
-<button type='submit'>Add Comment</button>
+<button type='submit' className='bg-pink-200'>Add Comment</button>
 </form>
     </div>
   )

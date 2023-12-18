@@ -6,6 +6,8 @@ import Questions from './Questions';
 import Contact from './Contact';
 import Navigation from './component/Navigation';
 import Footer from './component/Footer';
+import './App.css'
+
 // run this npm for brower router --npm install react-router-dom@6
 
 const App = () => {

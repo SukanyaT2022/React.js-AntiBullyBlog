@@ -1,17 +1,22 @@
 import React from 'react'
+import '../App.css'
 
 const Post = ({title,comments,content}) => {
   return (
     <div>
-        <h2>{title}</h2>
-        <h2>{title}</h2>
+     <div className='bg-purple-200'>
+        <p>{title}</p>
+        <p>{content}</p>
+        </div>
         <ul>
+    
 {comments.map((comment,index)=>{
     return(
         <li key={index}>{comment}</li>
     )
 })}
         </ul>
+        
     </div>
   )
 }
